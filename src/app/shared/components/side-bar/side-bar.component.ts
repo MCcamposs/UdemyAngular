@@ -6,25 +6,60 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit{
-  /* Si ponemos private solo lo podremos usar dentro de esta clase
-  por eso da error */
-  LinksMenu:Array<any> = [
-    {
-      name: "Home",
-      icon: 'uil-estate',
-    },
-    {
-      name: "Buscar",
-      icon: 'uil-search', //nombre de la clase
-    }
-  ] /* será un array que contendrá un tipo de valor que aun no sabemos */
+ 
+  mainMenu: {defaultOptions:Array<any>, accessLink:Array<any>
+  }= {defaultOptions: [], accessLink: []}
+
+  customOptions:Array<any> =[]
 
   constructor(){
 
   }
-  
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.mainMenu.defaultOptions = [
+      {
+        name: 'Home',
+        icon: '',
+        router: '/',
+      },
+      {
+        name: 'Buscar',
+        icon: '',
+        router: ['/', 'history'],
+      },
+      {
+        name: 'Tu biblioteca',
+        icon: '',
+        router: ['/', 'favorite'],
+      }
+    ]
+
+    this.mainMenu.accessLink = [
+      {
+        name:'Crear lista',
+        icon:''
+      },
+      {
+        name:'Canciones que te gustan',
+        icon:''
+      }
+    ]
+
+    this.customOptions = [
+      {
+        name: 'Mi lista 1',
+        router:['/']
+      },
+      {
+        name: 'Mi lista 2',
+        router:['/']
+      },
+      {
+        name: 'Mi lista 3',
+        router:['/']
+      },
+    ]
   }
 
 }
