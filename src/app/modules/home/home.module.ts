@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 /* importa el modulo propio de routing */
 import { HomeRoutingModule } from './home-routing.module';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule, /* queremos usar el modulo compartido */
   ]
 })
 export class HomeModule { }
