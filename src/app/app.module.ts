@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router'; /* para usar el router-outlet */
+import { AppRoutingModule } from './app-routing.module'; /* para usar el router-outlet */
 
 @NgModule({
   declarations: [ /* componentees, directivas, pipes */
@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router'; /* para usar el router-outlet */
   ],
   imports: [ /* solo se importan otros modulos */
     BrowserModule,
-    RouterModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
