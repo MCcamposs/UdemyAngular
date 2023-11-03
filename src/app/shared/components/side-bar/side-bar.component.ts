@@ -20,17 +20,17 @@ export class SideBarComponent implements OnInit{
     this.mainMenu.defaultOptions = [
       {
         name: 'Home',
-        icon: '',
+        icon: 'uil uil-estate',
         router: '/',
       },
       {
         name: 'Buscar',
-        icon: '',
+        icon: 'uil uil-search',
         router: ['/', 'history'],
       },
       {
         name: 'Tu biblioteca',
-        icon: '',
+        icon: 'uil uil-chart',
         router: ['/', 'favorite'],
       }
     ]
@@ -38,11 +38,11 @@ export class SideBarComponent implements OnInit{
     this.mainMenu.accessLink = [
       {
         name:'Crear lista',
-        icon:''
+        icon:'uil-plus-square'
       },
       {
         name:'Canciones que te gustan',
-        icon:''
+        icon:'uil-heart-medical'
       }
     ]
 

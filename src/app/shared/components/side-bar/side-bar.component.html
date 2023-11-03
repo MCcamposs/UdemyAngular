@@ -3,11 +3,12 @@
     <ul class="side-bar__list list-one">
         <li *ngFor="let item of mainMenu.defaultOptions">
             <div class="list-wrapper-item">
-                <i [ngClass]="['uil',item.icon]"></i>
+                <i [ngClass]="['uil',item.icon]"></i> <!-- concatena todos los valores de larray como si fueran clases del msimo objeto -->
                 <span class="side-bar__list list-label">{{item.name}}</span>
             </div>
         </li>
     </ul>
+    <!-- CREAR LISTA Y CANCIONES QUE TE GUSTAN -->
     <div class="side-bar__separator"></div>
     <ul class="side-bar__list list-two">
         <li *ngFor="let item of mainMenu.accessLink">
@@ -17,6 +18,7 @@
             </div>
         </li>
     </ul>
+    <!-- LISTAS DE CANCIONES -->
     <div class="side-bar__separator line-separator"></div>
     <ul class="side-bar__list list-three">
         <li *ngFor="let item of customOptions">
