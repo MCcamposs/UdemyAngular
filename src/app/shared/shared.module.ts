@@ -20,4 +20,4 @@ import { HeaderUserComponent } from './components/header-user/header-user.compon
     SideBarComponent,
   ]
 })
-export class SharedModule { }
+export class SharedModule { } 

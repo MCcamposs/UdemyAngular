@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './pages/homepage/homepage.component';
+import { HomepageComponent } from './pages/homepage/home-page.component';
 
 /* donde vamos a empezar a definir nuestras rutas */
 const routes: Routes = [
-  {
-    /* venimos desde el app-routing -> home.moduke -> aqui */
-    path:'', // http://localhost:4200/home/dashboard
-    component: HomepageComponent 
-  }
+ {
+  path:'tracks',
+  loadChildren:() => import('@modules/tracks/tracks.module').then(m => m.TracksModule)
+ },
+ {
+  path:'favorites',
+  loadChildren:() => import('@modules/favorites/favorites.module').then(m => m.FavoritesModule)
+ },
+ {
+  path:'history',
+  loadChildren:() => import('@modules/history/history.module').then(m => m.HistoryModule)
+ }
 ];
 
 @NgModule({
