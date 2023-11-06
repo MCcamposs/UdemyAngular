@@ -1,1 +1,36 @@
-<p>media-player works!</p>
+<!-- BARRA DE REPRODUCCIÓN -->
+<div class="media-player">
+    <div class="media-player--wrapper ">
+        <!--Zona del artista-->
+        <div class="artist player-center">
+            <ng-container *ngTemplateOutlet="artistZone"></ng-container><!-- el contenido está abajo -->
+        </div>
+        <!--Zona del reproductor-->
+        <div class="player-controls player-center">
+            <ng-container></ng-container>
+        </div>
+        <!--Zona del controles adicionales-->
+        <div class="player-audio player-center">
+            <ng-container></ng-container>
+        </div>
+    </div>
+</div>
+
+
+<!-- ZONA TEMPLATES -->
+
+<ng-template #artistZone>
+    <div class="artist-inside" >
+
+        <img alt="" class="cover">
+        <div class="track-info">
+            <h3 class="track-title">titulo</h3>
+            <h5 class="track-title sub-title">algo</h5>
+        </div>
+        <div class="track-like">
+            <button class="btn-like">
+                <i class="uil uil-heart"></i>
+            </button>
+        </div>
+    </div>
+</ng-template>
